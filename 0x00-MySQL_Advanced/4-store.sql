@@ -1,4 +1,5 @@
--- SQL script that creates a trigger that decreases the quantity of an item after adding a new order.
+-- SQL script that creates a trigger that decreases 
+-- ...the quantity of an item after adding a new order.
 
 CREATE TABLE IF NOT EXISTS items (
     name VARCHAR(255) NOT NULL,
