@@ -1,11 +1,10 @@
-# web.py
-
+#!/usr/bin/env python3
+"""Web caching and tracking system."""
 import requests
 import redis
 from functools import wraps
 import time
 
-# Initialize Redis connection
 redis_client = redis.Redis()
 
 def count_calls(func):
@@ -39,8 +38,7 @@ def get_page(url: str) -> str:
     response = requests.get(url)
     return response.text
 
-# Example usage
 if __name__ == "__main__":
-    url = "http://slowwly.robertomurray.co.uk/delay/5000/url/https://example.com"
+    url = "http://slowwly.robertomurray.co.uk/delay/5000/url/https://example.org"
     html = get_page(url)
     print(html)
