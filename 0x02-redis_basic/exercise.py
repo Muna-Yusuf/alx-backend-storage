@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import redis
 import uuid
 from typing import Union, Callable, Optional
